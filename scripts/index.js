@@ -14,9 +14,9 @@ document.getElementById("startBtn").addEventListener("click", function () {
     const id = setInterval(function () {
         spanedSec++;
 
-        if (spanedSec > 5) {
+        if (spanedSec > 9) {
             clearInterval(id);
-            dispNum.innerHTML = "終了";
+            dispNum.innerHTML = "";
             return;
         }
 
@@ -24,7 +24,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
         ans += randNum;
 
         dispNum.innerHTML = `${randNum}`;
-    }, 700);
+    }, 400);
 });
 
 // 答え合わせボタンを押したら、入力された数字と答えを比較するメソッド
