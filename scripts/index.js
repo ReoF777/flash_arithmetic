@@ -5,13 +5,13 @@ document.getElementById("startBtn").addEventListener("click", function () {
     const dispNum = document.getElementById("dispNum");
     const inputNum = document.getElementById("inputNum");
     const level = document.getElementById("level");
-    let ans = 0;
+    ans = 0;
     let range = 10;
     let speed = 400;
 
     if (level.value == "easy") {
         range = 10;
-        speed = 400;
+        speed = 500;
     }
     if (level.value == "normal") {
         range = 100;
@@ -45,13 +45,14 @@ document.getElementById("startBtn").addEventListener("click", function () {
 
 // 答え合わせボタンを押したら、入力された数字と答えを比較するメソッド
 document.getElementById("ansBtn").addEventListener("click", function () {
-    console.log("ansBtn clicked");
     const inputNum = document.getElementById("inputNum");
     const result = document.getElementById("result");
 
-    if (inputNum.value == ans) {
+    if (inputNum.value == ans && ans > 0) {
         result.innerHTML = "Correct!";
     } else {
         result.innerHTML = "Wrong!";
     }
+
+    console.log("Ans is" + ans);
 });
