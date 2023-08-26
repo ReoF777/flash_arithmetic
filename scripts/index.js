@@ -1,21 +1,30 @@
+let ans = 0;
+
 
 document.getElementById("ansBtn").addEventListener("click", function () {
     console.log("ansBtn clicked");
     const ansBtn = document.getElementById("ansBtn");
     const dispNum = document.getElementById("dispNum");
-    dispNum.insertAdjacentHTML("beforebegin", "1");
+    const inputNum = document.getElementById("inputNum");
+
+    //inputNum.value = 0;
 
     var spanedSec = 0;
 
     var id = setInterval(function () {
         spanedSec++;
+        var randNum = Math.floor(Math.random() * 10);
 
-        if (spanedSec > 10) {
+        if (spanedSec > 5) {
             clearInterval(id);
         }
 
-        dispNum.insertAdjacentHTML("beforebegin", "1");
-    }, 1000);
+        ans += randNum;
+
+        dispNum.innerHTML = `${randNum}`;
+    }, 700);
+
+    dispNum.innerHTML = null;
 
 
 });
