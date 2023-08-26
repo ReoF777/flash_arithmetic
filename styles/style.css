@@ -43,7 +43,7 @@ h1:before {
 .controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -73,4 +73,15 @@ h1:before {
     font-weight: italic;
     color: #57cb83;
     margin-bottom: 50px;
+}
+
+#level {
+    height: 40px;
+    width: 110px;
+    font-size: 16px;
+}
+
+label[for="level"] {
+    font-size: 14px;
+    /* 任意のフォントサイズに調整 */
 }

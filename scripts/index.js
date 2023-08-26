@@ -2,10 +2,26 @@ let ans = 0;
 
 // スタートボタンを押したら、ランダムな数字を表示するメソッド
 document.getElementById("startBtn").addEventListener("click", function () {
-    console.log("startBtn clicked");
     const dispNum = document.getElementById("dispNum");
     const inputNum = document.getElementById("inputNum");
+    const level = document.getElementById("level");
     let ans = 0;
+    let range = 10;
+    let speed = 400;
+
+    if (level.value == "easy") {
+        range = 10;
+        speed = 400;
+    }
+    if (level.value == "normal") {
+        range = 100;
+        speed = 300;
+    }
+    if (level.value == "hard") {
+        range = 1000;
+        speed = 200;
+    }
+
 
     inputNum.value = "";
 
@@ -20,11 +36,11 @@ document.getElementById("startBtn").addEventListener("click", function () {
             return;
         }
 
-        const randNum = Math.floor(Math.random() * 10);
+        const randNum = Math.floor(Math.random() * range);
         ans += randNum;
 
         dispNum.innerHTML = `${randNum}`;
-    }, 400);
+    }, speed);
 });
 
 // 答え合わせボタンを押したら、入力された数字と答えを比較するメソッド
