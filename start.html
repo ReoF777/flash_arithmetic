@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>フラッシュ暗算</title>
+        <link rel="stylesheet" href="styles/start.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <h2>メニュー</h2>
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">成績記録</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h1>フラッシュ暗算</h1>
+                <p>レベルを選んで開始ボタンをクリックしてください。</p>
+                <div class="controls">
+                    <button id="startBtn">開始</button>
+                    <label for="level">レベル選択:</label>
+                    <select id="level" name="level">
+                        <option value="easy">easy</option>
+                        <option value="medium">normal</option>
+                        <option value="hard">hard</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/start.js"></script>
+    </body>
+</html>
