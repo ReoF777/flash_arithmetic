@@ -1,23 +1,27 @@
+const level = sessionStorage.getItem('level');
+const problemCount = sessionStorage.getItem('problemCount');
+
 let ans = 0;
 
 // スタートボタンを押したら、ランダムな数字を表示するメソッド
 document.getElementById("startBtn").addEventListener("click", function () {
     const dispNum = document.getElementById("dispNum");
     const inputNum = document.getElementById("inputNum");
-    const level = document.getElementById("level");
+    const result = document.getElementById("result");
+    dispNum.innerHTML = "";
+    result.innerHTML = "";
     ans = 0;
     let range = 10;
     let speed = 400;
-
-    if (level.value == "easy") {
+    if (level == "easy") {
         range = 10;
         speed = 500;
     }
-    if (level.value == "normal") {
+    if (level == "normal") {
         range = 100;
         speed = 300;
     }
-    if (level.value == "hard") {
+    if (level == "hard") {
         range = 1000;
         speed = 200;
     }
@@ -30,7 +34,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
     const id = setInterval(function () {
         spanedSec++;
 
-        if (spanedSec > 9) {
+        if (spanedSec > problemCount) {
             clearInterval(id);
             dispNum.innerHTML = "";
             return;
@@ -54,5 +58,10 @@ document.getElementById("ansBtn").addEventListener("click", function () {
         result.innerHTML = "Wrong!";
     }
 
-    console.log("Ans is" + ans);
+    console.log("Ans is " + ans);
+});
+
+document.getElementById("finishBtn").addEventListener("click", function () {
+    event.preventDefault();
+    window.location.href = 'start.html';
 });

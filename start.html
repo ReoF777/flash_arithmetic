@@ -11,21 +11,24 @@
             <div class="sidebar">
                 <h2>メニュー</h2>
                 <ul>
-                    <li><a href="#">ホーム</a></li>
+                    <li><a href="start.html">ホーム</a></li>
                     <li><a href="#">成績記録</a></li>
                 </ul>
             </div>
             <div class="main-content">
-                <h1>フラッシュ暗算</h1>
-                <p>レベルを選んで開始ボタンをクリックしてください。</p>
+                <h1>フラッシュ暗算</h1><br><br>
+                <p>レベルと問題数を選んで開始ボタンをクリックしてください。</p><br><br><br>
                 <div class="controls">
-                    <button id="startBtn">開始</button>
                     <label for="level">レベル選択:</label>
                     <select id="level" name="level">
                         <option value="easy">easy</option>
-                        <option value="medium">normal</option>
+                        <option value="normal">normal</option>
                         <option value="hard">hard</option>
                     </select>
+                    <label for="problemCount">問題数:</label>
+                    <input type="number" id="problemCount" name="problemCount"
+                        min="1" value="10"><br><br>
+                    <button id="startBtn">開始</button>
                 </div>
             </div>
         </div>

@@ -1,34 +1,72 @@
 /* サイドバーのスタイル */
 .sidebar {
-    width: 10%;
-    /* 幅を100%に設定 */
+    width: 250px;
     height: 100%;
     position: fixed;
-    /* フィックスドポジション */
     top: 0;
-    /* 上端に配置 */
     left: 0;
-    /* 左端に配置 */
-    background-color: rgb(176, 226, 226);
+    background-color: #34495e;
+    /* サイドバーの背景色 */
     padding: 20px;
     z-index: 1000;
-    /* サイドバーを最前面に表示 */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* サイドバーの影 */
+    overflow-y: auto;
+    /* コンテンツがはみ出た場合にスクロールバーを表示 */
 }
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #3498db;
+    /* ホバー時のリンク色 */
+}
+
 
 /* メインコンテンツのスタイル */
 .main-content {
     margin-left: 12%;
-    background-color: rgb(152, 219, 174);
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
 }
 
-/* テキストを右に寄せるスタイル */
-.main-content p,
-.main-content h1,
-.main-content h2,
-.main-content h3 {
-    text-align: center;
+#startBtn,
+#level {
+    font-size: 18px;
+    background-color: #57cb83;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controll {
+    margin-left: 30px;
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: #f0f0f0;
 }
